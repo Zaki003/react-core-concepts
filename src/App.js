@@ -2,22 +2,22 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Person name="Zaki" job="Student" age='23'></Person>
+      <Person name="Drizzle" job="Teacher" age='21'></Person>
+    </div>
+  );
+}
+
+function Person(props) {
+  console.log(props);
+  return (
+    <div className="person">
+      <h2>Name: {props.name}</h2>
+      <h3>Age: {props.age}</h3>
+      <h4>Proffession: {props.job}</h4>
     </div>
   );
 }
